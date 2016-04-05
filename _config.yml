@@ -4,7 +4,7 @@
 
 # Site
 title: QAQMiao's Blog
-subtitle: the insistence from a programming cat.
+subtitle: 春风十里不如你
 description: The things we get in life can make us a living，the things we give to people can make a life
 author: QAQMiao
 language:
@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
 root: /
-permalink: :year-:month-:day-:title/
+permalink: :year-:month-:day/:title/
 permalink_defaults:
 
 # Directory
