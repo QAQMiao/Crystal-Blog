@@ -11,6 +11,7 @@
       </header>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
+
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link){ %>
@@ -18,7 +19,14 @@
             <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
           </p>
         <% } %>
+
       <% } else { %>
+      <div style="font-size:1em;color:blue">
+        <h2>目录</h2>
+        <% if(post.toc !== false){ %>
+          <%- toc(post.content, {list_number: true}) %>
+        <% } %>
+      </div>
         <%- post.content %>
       <% } %>
     </div>
