@@ -1,3 +1,4 @@
+<%- css('/css/style.css') %>
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="article-meta">
     <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
@@ -19,14 +20,7 @@
             <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
           </p>
         <% } %>
-
       <% } else { %>
-      <div style="font-size:1em;color:blue">
-        <h2>目录</h2>
-        <% if(post.toc !== false){ %>
-          <%- toc(post.content, {list_number: true}) %>
-        <% } %>
-      </div>
         <%- post.content %>
       <% } %>
     </div>
